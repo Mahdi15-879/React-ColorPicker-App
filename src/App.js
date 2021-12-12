@@ -8,6 +8,11 @@ import { generatePalette } from "./colorHelpers";
 import "./App.css";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.findPalette = this.findPalette.bind(this);
+  }
+
   findPalette(id) {
     return seedColors.find(function (palette) {
       return palette.id === id;
@@ -17,6 +22,18 @@ class App extends Component {
   render() {
     return (
       <Switch>
+        <Route
+          exact
+          path="/palette/:paletteId/:colorId"
+          render={(routeProps) => (
+            <SingleColorPalette
+              colorId={routeProps.match.params.colorId}
+              palette={generatePalette(
+                this.findPalette(routeProps.match.params.paletteId)
+              )}
+            />
+          )}
+        />
         <Route
           exact
           path="/"
@@ -34,11 +51,6 @@ class App extends Component {
               )}
             />
           )}
-        />
-        <Route
-          exact
-          to="/palette/:paletteId/:colorId"
-          render={() => <SingleColorPalette />}
         />
       </Switch>
 
