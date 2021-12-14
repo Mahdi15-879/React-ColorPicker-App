@@ -1,14 +1,15 @@
 export default {
   root: {
     backgroundColor: "white",
-    border: "1px solid black",
+    // border: "1px solid black",
     borderRadius: "5px",
     padding: "0.5rem",
     position: "relative",
     overflow: "hidden",
     height: "100%",
-    "&:hover": {
-      cursor: "pointer",
+    cursor: "pointer",
+    "&:hover svg": {
+      opacity: 1,
     },
   },
   colors: {
@@ -24,7 +25,7 @@ export default {
     alignItems: "center",
     margin: "0",
     color: "black",
-    paddingTop: "0.5rem",
+    padding: "0.7rem 0",
     fontSize: "1rem",
     position: "relative",
   },
@@ -39,5 +40,19 @@ export default {
     margin: "0 auto",
     position: "relative",
     marginBottom: "-3.5px",
+  },
+  delete: {},
+  deleteIcon: {
+    color: "white",
+    backgroundColor: "#eb3d30",
+    width: "20px",
+    height: "20px",
+    position: "absolute",
+    top: "0",
+    right: "0",
+    padding: "10px",
+    zIndex: 10,
+    opacity: 0,
+    transition: "all 0.4s ease-in-out",
   },
 };
