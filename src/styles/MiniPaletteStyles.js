@@ -25,7 +25,7 @@ export default {
     alignItems: "center",
     margin: "0",
     color: "black",
-    padding: "0.7rem 0",
+    padding: "0.6rem 0",
     fontSize: "1rem",
     position: "relative",
   },
@@ -41,7 +41,6 @@ export default {
     position: "relative",
     marginBottom: "-3.5px",
   },
-  delete: {},
   deleteIcon: {
     color: "white",
     backgroundColor: "#eb3d30",
