@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { withStyles } from "@material-ui/core/styles";
 import classNames from "classnames";
+import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/ColorBoxStyles";
 
 class ColorBox extends Component {
@@ -19,8 +19,7 @@ class ColorBox extends Component {
   }
 
   render() {
-    const { name, background, moreUrl, showingFullPalette, classes } =
-      this.props;
+    const { name, background, moreUrl, showingFullPalette, classes } = this.props;
     const { copied } = this.state;
 
     return (
